@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Responsive Button</title>
+      <style>
+            *{
+                  margin: 0;
+                  padding: 0;
+            }
+            body{
+                  height: 100vh;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  background: black;
+            }
+            button{
+                  padding: 50px 150px;
+                  border: none;
+                  font-size: 22px;
+                  border-radius: 15px;
+                  font-weight: bold;
+                  background: linear-gradient(45deg,red,hotpink);
+                  position: relative;
+                  cursor: pointer;
+            }
+            button::before{
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  border: solid;
+                  box-shadow: 1px 1px 5px rgba(0,0,0, 0.4);
+                  border-color: #000 rgba(255,255,255, 0.3) rgba(255,255,255, 0.3) #000;
+                  border-width: 0;
+                  border-bottom-right-radius: 15px;
+                  transition: 0.3s ease-in-out;
+            }
+            button:hover::before{
+                  border-width: 20px;
+            }
+      </style>
+</head>
+<body>
+      <button>
+            Hover ME
+      </button>
+</body>
+</html>
